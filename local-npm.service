@@ -1,0 +1,13 @@
+[Unit]
+Description=local-npm Service
+
+[Service]
+ExecStart=/home/sean/.nvm/versions/node/v6.5.0/bin/node /home/sean/.nvm/versions/node/v6.5.0/lib/node_modules/local-npm/lib/bin.js -d /home/sean/.local-npm
+Restart=always
+RestartSec=10                       # Restart service after 10 seconds if node service crashes
+StandardOutput=syslog               # Output to syslog
+StandardError=syslog                # Output to syslog
+SyslogIdentifier=nodejs-example
+
+[Install]
+WantedBy=multi-user.target
