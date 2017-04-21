@@ -63,10 +63,9 @@ sudo apt install indicator-multiload
 sudo apt install openjdk-8-jdk
 ```
 
-**Atom**
+**VSCode**
 
-Install deb file from [Atom.io](https://atom.io/)
-Install `sync-settings` package and load packages from generated github gist
+Visit the VSCode site.
 
 **Node**
 
@@ -114,7 +113,7 @@ sudo apt install gnome-system-log
 ```
 
 -   Bash Config
-Copy in `.bashrc`, `.bash_profile`, `.bash_aliases` and `.dircolors`
+Copy in the zshell stuff@installed
 
 -   Bash Git Prompt
 

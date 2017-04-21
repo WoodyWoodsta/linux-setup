@@ -1,0 +1,80 @@
+{
+  // use Airbnb Javascript Style Guidelines
+  // Required modules: eslint-config-airbnb-base, eslint-plugin-import
+  // see https://www.npmjs.com/package/eslint-config-airbnb-base
+  "extends": "airbnb-base",
+  "plugins": [
+    "babel",
+    "html"
+  ],
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true,
+    "browser": true,
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".es6", ".js", ".json"],
+      },
+    },
+    "import/core-modules": [
+      "atom",
+      "electron",
+    ],
+  },
+  "ecmaFeatures": {
+    "templateStrings ": true
+  },
+  "globals": {
+    "_debug": false,          // visionmedia/debug instance
+    "Polymer": false,         // Polymer Projects
+    "PolymerElement": false,  // Polymer Projects
+  },
+  "rules": {
+    // rule overrides
+    "generator-star-spacing": [2, {
+      "before": false,
+      "after": true
+    }],
+    "new-cap": [2, {
+      "capIsNewExceptions": [
+        "Polymer",
+        "PolymerElement"
+      ]
+    }],
+    "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore",
+    }],
+    "consistent-return": 0,
+    "consistent-this": [2, "_this"],
+    "import/prefer-default-export": 0,
+    "import/extensions": [2, "never", { "json": "always"}],
+    "max-len": [2, 130, 2, {
+      "ignoreUrls": true,
+      "ignoreComments": false
+    }],
+    "no-param-reassign": [2, {
+      "props": false
+    }],
+    "no-bitwise": [2, { "allow": ["~"] }],
+    "no-plusplus": 0,
+    "no-underscore-dangle": 0,
+    "no-use-before-define": 0,
+    "prefer-const": [2, {
+      "destructuring": "all"
+    }],
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      // "ForOfStatement",
+      "LabeledStatement",
+      "WithStatement",
+    ],
+  }
+}
